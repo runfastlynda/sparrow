@@ -1,0 +1,63 @@
+
+$bgcolor: #fafafa;
+$header-text-color: #333;
+
+/* font seting*/
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+
+/*common css*/
+body{
+    background: $bgcolor;
+    font-family: Georgia,'Helvetica Neue', 'Hiragino Sans GB', Helvetica, Arial, Sans-serif;
+}
+a {
+    text-decoration: none;
+    cursor: auto;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.07);
+
+    header {
+        text-align: center;
+
+        h1 {
+            color: $header-text-color;
+            font-weight: blod;
+            font-size: 2em;
+        }
+
+        nav {
+            color: rgba(0,0,0,0.6);
+
+            a {
+                color: rgba(0,0,0,0.6);
+            }
+            a:hover {
+                color: $header-text-color;
+            }
+        }
+    }
+}
