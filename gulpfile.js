@@ -5,8 +5,7 @@ var prefix      = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
     gulp.src('app/scss/main.scss')
-        .pipe(sass())   
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(sass())
         .pipe(gulp.dest('app/css'))
 });
 
