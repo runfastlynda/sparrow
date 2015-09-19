@@ -16,7 +16,7 @@
 
 /*common css*/
 body {
-  background: #fafafa;
+  background-color: #fafafa;
   font-family: Georgia,'Helvetica Neue', 'Hiragino Sans GB', Helvetica, Arial, Sans-serif; }
 
 a {
@@ -27,11 +27,12 @@ a:hover {
   text-decoration: underline; }
 
 .container {
-  background: #fff;
-  width: 100%;
-  margin: 0 auto;
-  padding: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.07); }
+  max-width: 800px;
+  min-width: 300px;
+  background-color: #fff;
+  margin: 20px auto;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 0 0 20px 0; }
   .container header {
     text-align: center; }
     .container header h1 {
@@ -44,3 +45,31 @@ a:hover {
         color: rgba(0, 0, 0, 0.6); }
       .container header nav a:hover {
         color: #333; }
+  .container .content {
+    margin: 20px auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    width: 85%;
+    padding: 0 10px; }
+    .container .content h3 {
+      padding: 0 0px;
+      text-align: right; }
+    .container .content ul {
+      padding: 0 0px;
+      margin: 0;
+      color: rgba(0, 0, 0, 0.6); }
+    .container .content li {
+      list-style: none;
+      clear: both;
+      margin: 20px 0; }
+      .container .content li a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+        display: block; }
+      .container .content li a:hover {
+        text-decoration: underline; }
+
+footer {
+  text-align: center;
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 13px; }

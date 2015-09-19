@@ -1,6 +1,10 @@
 
 $bgcolor: #fafafa;
 $header-text-color: #333;
+$contain-bgcolor: #fff;
+$div-border-color: rgba(0,0,0,0.07);
+$nav-text-color: rgba(0,0,0,0.6);
+$content-text-color: rgba(0,0,0,0.8);
 
 /* font seting*/
 @font-face {font-family: 'iconfont';
@@ -21,7 +25,7 @@ $header-text-color: #333;
 
 /*common css*/
 body{
-    background: $bgcolor;
+    background-color: $bgcolor;
     font-family: Georgia,'Helvetica Neue', 'Hiragino Sans GB', Helvetica, Arial, Sans-serif;
 }
 a {
@@ -34,30 +38,68 @@ a:hover {
 }
 
 .container {
-    background: #fff;
-    width: 100%;
-    margin: 0 auto;
-    padding: 15px;
-    border: 1px solid rgba(0,0,0,0.07);
-
+    max-width: 800px;
+    min-width: 300px;
+    background-color: $contain-bgcolor;
+    margin: 20px auto;
+    border: 1px solid $div-border-color;
+    padding: 0 0 20px 0;
     header {
         text-align: center;
-
         h1 {
             color: $header-text-color;
             font-weight: blod;
             font-size: 2em;
         }
-
         nav {
-            color: rgba(0,0,0,0.6);
+            color: $nav-text-color;
 
             a {
-                color: rgba(0,0,0,0.6);
+                color: $nav-text-color;
             }
             a:hover {
                 color: $header-text-color;
             }
         }
     }
+    .content {
+        margin: 20px auto;
+        border-top: 1px solid $div-border-color;
+        width: 85%;
+        padding: 0 10px;
+        h3 {
+            padding: 0 0px;
+            text-align: right;
+        }
+        ul {
+            padding: 0 0px;
+            margin: 0;
+            color: $nav-text-color; 
+        }        
+        li {
+            list-style: none;
+            clear: both;
+            margin: 20px 0;
+            a {
+                text-decoration: none;
+                color: $content-text-color;
+                display: block;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            small {
+                // float: right;
+                // margin-left: 15px;
+                // pc端：font-size: 16px;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: $bgcolor;
+    color: $nav-text-color; 
+    font-size: 13px;
 }
