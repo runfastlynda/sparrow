@@ -4,7 +4,7 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
-    gulp.src('app/scss/main.scss')
+    gulp.src('app/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('app/css'))
 });
