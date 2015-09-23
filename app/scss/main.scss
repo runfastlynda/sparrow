@@ -43,6 +43,9 @@ a:hover {
     margin: 20px auto;
     border: 1px solid $div-border-color;
     padding: 0 0 20px 0;
+    .weixin{
+        display: none;
+    }
     header {
         text-align: center;
         h1 {
@@ -351,4 +354,30 @@ footer {
             }
         }
     }
+}
+
+@media screen and (min-width: 1320px) {
+    .container{
+        .weixin{
+            text-align: center;
+            width: 136px;
+            position: fixed;
+            left: 79%;
+            top: 60px;
+            padding: 10px 6px;
+            color: rgba(0, 0, 0, 0.6);
+            border: 1px solid $div-border-color;
+            background-color: #fff;
+            display: block;
+        }
+        .weixin img {
+            width: 100px;
+            height: 100px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+  
 }
