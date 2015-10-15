@@ -1,6 +1,9 @@
 ### Sparrow Theme
 
-又一个博客主题 :) [Demo](http://runfastlynda.com)
+又一个极简主义的博客主题 :) [Demo](http://runfastlynda.com)
+
+![](http://7xjufd.dl1.z0.glb.clouddn.com/Sparrow.png)
+
 
 
 #### 在Jekyll使用本主题
