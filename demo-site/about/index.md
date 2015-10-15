@@ -17,6 +17,12 @@ categories: jekyll update
 4. 博客title之类的元信息都存放在`_config.yml`文件中
 
 #### 应用到其它博客系统上
+
+```
+git clone https://github.com/runfastlynda/sparrow.git
+cd sparrow
+npm init
+```
 除了直接使用jekyll外，你也可以通过修改html静态模板，自定义到任何一款博客系统上，例如Hexo、Ghost、Octopress。静态模板存放在`sparrow/app`目录下，项目采用gulp构建，进入`app`目录后执行`gulp`可本地预览静态页面效果。Have Fun!
 
 #### 说明

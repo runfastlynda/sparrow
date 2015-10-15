@@ -35,6 +35,11 @@
           <li>博客title之类的元信息都存放在<code>_config.yml</code>文件中</li> 
          </ol> 
          <h4>应用到其它博客系统上</h4> 
+         <div class="highlight">
+<pre><code class="language-text" data-lang="text">git clone https://github.com/runfastlynda/sparrow.git
+cd sparrow
+npm init</code></pre>
+         </div>
          <p>除了直接使用jekyll外，你也可以通过修改html静态模板，自定义到任何一款博客系统上，例如Hexo、Ghost、Octopress。静态模板存放在<code>sparrow/app</code>目录下，项目采用gulp构建，进入<code>app</code>目录后执行<code>gulp</code>可本地预览静态页面效果。Have Fun!</p> 
          <h4>说明</h4> 
          <p>博客的书单页是通过豆瓣图书地址，通过ajax动态抓取的，豆瓣在api访问上有限制，在不带apikey的情况下访问限制150次/h，带apikey后访问限制变为500次/h。建议可以去申请一个apikey，然后添加到book页对应的js中。</p> 
