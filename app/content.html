@@ -1,188 +1,60 @@
 <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>sparrow</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="/css/monokai.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>sparrow</h1>
+        <nav>
+            <a href="/">首页</a>
+            /
+            <a href="book.html">书单</a>
+            /
+            <a href="about.html">关于</a>
+        </nav>              
+      </header>
+      <div class="content markdown"> 
+        <div class="title"> 
+        <h1>Welcome to Jekyll!</h1> 
+        </div> 
+        <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p> 
+        <p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p> 
+        <p>Jekyll also offers powerful support for code snippets:</p> 
 
-    <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>sparrow</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/iconfont.css">
-      </head>
-      <body>
-          <div class="container">
-              <header>
-                  <h1>lazybios</h1>
-                  <nav>
-                      <a href="/">首页</a>
-                      /
-                      <a href="/">归档</a>
-                      /
-                      <a href="/">项目</a>
-                      /
-                      <a href="/">书单</a>
-                      /
-                      <a href="/">关于</a>
-                  </nav>
-              </header>
-              <div class="content markdown">
-                <div class="title">
-                  <h1>对 Ruby 未来的思考</h1>
-                </div>
-                 <p>经常遇到Collapsing Margins，也就是margin折叠的情况，可总是不知道哪里出现了问题。
-               那就让我们来探讨下这个 margin 折叠 到底是什么鬼？它们是如何影响页面上的元素的？我们该如何拿下它？</p>
+        <div class="highlight"> 
+          <pre>
+<code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code>
+          </pre> 
+        </div> 
 
-               <h3>margin折叠是什么？</h3>
-
-               <p>在W3C规范是这样定义margin折叠的：相邻的2个或多个盒子排列时会形成一个单一的margin。
-               也就是说，当两个元素的垂直边缘是相接触的，只有拥有大的margin的元素的margin将被实现，
-               而margin较小的元素的margin将被折叠到零。</p>
-               <blockquote>
-               <p>静态类型系统确实能减少运行时的错误，提升数据的完整性，所以很容易误导人们觉得只要能通过编译让程序跑起来，那它基本上就没什么 bug 了。人们在用强静态类型系统的语言写程序时似乎很少依赖单元测试，当然这也可能只是我的想象罢了。</p>
-
-               <p>—— Steve Yegge，弱类型机制够不够强。</p>
-               </blockquote>
-
-               <p>如果两者均为负，则使用那个大的的负值做margin。当然这个定义适用于相邻元素和嵌套元素。</p>
-
-               <h4>相邻元素之间的margin折叠。</h4>
-
-               <p>简单来说，这意味着在正常文档流中相邻的垂直块级元素，相比之下最大的margin值将被认可为的元素的margin，而具有较小的margin的元素的margin将被折叠到零。</p>
-               <ul>
-               <li>Static Typing</li>
-               <li>Concurrency</li>
-               <li>JIT</li>
-               </ul>
-
-               <p>例如，</p>
-
-               <pre><code>
-&lt;div class="a"&gt;
-   A
-&lt;/div&gt;
-&lt;div class="b"&gt;
-   B
-&lt;/div&gt;
-               </code></pre>
-
-               <p>A有一个25px的底部margin而在它下面的B有一个20px的顶部margin</p>
-
-               <pre><code>
-.a{
-  margin-bottom: 25px;
-}
-.b{
-  margin-top: 20px;
-}
-               </code></pre>
-
-               <p>那么此时只有25像素的底部margin会被执行，两个元素之间的距离是25px，而不是预想中的45px（25+20）。</p>
-               <img src="http://www.th7.cn/d/file/p/2012/11/12/cb74947b8e20397ebec5a717b3fbcb9f.png" alt="">
-
-               <p>到目前为止，我们只讨论了相邻元素的margin 折叠效应，但同样的事情对于父元素和子元素也是成立的。包括有几个子元素（即嵌套元素）的时候。</p>
-               <table>
-                 <thead>
-                   <tr>
-                    <th>Tables</th>
-                    <th>Are</th>
-                    <th>Cool</th>
-                    <th>coll</th>
-                  </tr>
-                 </thead>
-                 <tbody>
-                   <tr>
-                     <td>col 3 is</td>
-                     <td>right-aligned</td>
-                     <td>$1600</td>
-                     <td>1600</td>
-                   </tr>
-                   <tr>
-                     <td>col 2 is</td>
-                     <td>centered</td>
-                     <td>$12</td>
-                     <td>1600</td>
-                   </tr>
-                   <tr>
-                     <td>zebra stripes</td>
-                     <td>are neat</td>
-                     <td>$1</td>
-                     <td>1600</td>
-                   </tr>
-                 </tbody>
-               </table>
-
-               <p>例如:</p>
-
-               <pre><code>
-&lt;div class="a"&gt;
-  A
-  &lt;div class="b"&gt;
-    B
-  &lt;/div&gt;
-&lt;/div&gt;
-               </code></pre>
-
-               <p>CSS部分</p>
-
-               <pre><code>
-.a{
-  margin-top: 25px;
-}
-
-.b{
-  margin-top: 20px;
-}
-               </code></pre>
-
-               <p>A，B的顶部margin此时是25px，而不是45px。</p>
-
-               <h3>特殊情况</h3>
-
-               <p>有一种情况，会导致结果和margin折叠的行为不一致：当一个元素拥有负margin，相邻元素拥有正的margin时，
-               两个元素之间的<a href="www.baidu.com">baidu</a>距离将是正负margin相加在一起得到的值。</p>
-
-               <p>例如：</p>
-
-               <pre><code>
-&lt;div class="a"&gt;
-    A
-&lt;/div&gt;
-&lt;div class="b"&gt;
-    B
-&lt;/div&gt;
-               </code></pre>
-
-               <p>CSS部分：</p>
-
-               <pre><code>
-.a{
-  margin-bottom: -25px;
-}
-.b{
-  margin-top: 20px;
-}
-               </code></pre>
-
-               <p>此时A，B之间的距离是-5px.</p>
-
-               <h3>什么情况可以阻止margin折叠</h3>
-
-               <p>如果我们简单地给div元素添加一个边框，我们可以阻止margin折叠，
-               当我们不想要一个可见的顶部边框的设计时，那么给div元素添加padding-top：1px 会取得同样的效果。
-               同样，如果将overflow属性添加除visible以外的值，同样的效果也会发生。</p>
-
-               <p>注意，border和padding都应适用于父元素，给子元素添加border不会阻止margin折叠，因为子元素的margin此处是在border的外边。</p>
- 
-              </div>
-          </div>
-          <footer>
-            <p>Copyright © 2015 runfastlynda.</p>
-              <p>
-                  <a class="iconfont social github">&#xe69f;</a>
-                  <i class="iconfont social twitter">&#xf000e;</i>
-                  <i class="iconfont social weibo">&#xe603;</i>
-              </p>
-          </footer>
-      </body>
-    </html>
+        <p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.
+        </p> 
+      </div>
+      <div class="weixin">
+        <img src="http://7xklz5.com1.z0.glb.clouddn.com/about.3.jpg" alt="">
+        <p>微信扫一 扫<br>关注我的公众号</p>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright © 2015 runfastlynda.</p>
+      <p>
+        <a href="https://github.com/runfastlynda" class="iconfont social github">&#xe69f;</a>
+        <i class="iconfont social twitter">&#xf000e;</i>
+        <i class="iconfont social weibo">&#xe603;</i>
+      </p>
+    </footer>
+  </body>
+</html>
