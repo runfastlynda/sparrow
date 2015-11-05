@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/iconfont.css">
-    <link rel="stylesheet" href="/css/monokai.css" />
+    <link rel="stylesheet" href="css/monokai.css" />
   </head>
   <body>
     <div class="container">
       <header>
         <h1>sparrow</h1>
         <nav>
-            <a href="/">首页</a>
-            /
-            <a href="book.html">书单</a>
-            /
+            <a href="/">首页</a> /
+            <a href="book.html">书单</a> /
             <a href="about.html">关于</a>
         </nav>
       </header>
@@ -49,9 +47,20 @@ npm init</code></pre>
          </ul> 
         </div>
       </div>
-      <div class="weixin">
-        <img src="http://7xklz5.com1.z0.glb.clouddn.com/about.3.jpg" alt="">
-        <p>微信扫一扫<br>关注我的公众号</p>
+      <div class="pc_qrcode_outer" style="display: none;">
+          <div class="pc_qrcode_pc_inner">
+              <div class="qr_code_pc">
+                <img src="img/qrcode.jpg" alt="">
+                <p>微信扫一扫<br>关注我的公众号</p>
+              </div>
+          </div>
+      </div>
+      <div class="back_top_outer">
+          <div class="back_top_inner">
+              <div id="back-top">
+                  <a href="#top"><span></span></a>
+              </div>
+          </div>
       </div>
     </div>
     <footer>
@@ -62,5 +71,27 @@ npm init</code></pre>
           <i class="iconfont social weibo">&#xe603;</i>
         </p>
     </footer>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("#back-top").hide()
+
+            $(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 100){
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+                $('#back-top a').click(function(){
+                    $('body, html').animate({
+                        scrollTop: 0
+                    }, 800);
+
+                    return false;
+                });
+            });
+        });
+    </script>
   </body>
 </html>

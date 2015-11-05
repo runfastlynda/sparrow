@@ -284,20 +284,72 @@ footer {
     font-size: 2em; } }
 
 @media screen and (min-width: 1320px) {
-  .container .weixin {
-    text-align: center;
-    width: 136px;
+  .container .pc_qrcode_outer {
+    display: block !important;
     position: fixed;
-    left: 79%;
-    top: 60px;
-    padding: 10px 6px;
-    color: rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    background-color: #fff;
-    display: block; }
-  .container .weixin img {
-    width: 100px;
-    height: 100px; }
-  .container .weixin p {
-    font-size: 14px;
-    line-height: 20px; } }
+    left: 0;
+    right: 0;
+    top: 20px;
+    color: #717375;
+    text-align: center; }
+  .container .pc_qrcode_pc_inner {
+    position: relative;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
+  .container .qr_code_pc {
+    position: absolute;
+    right: -150px;
+    top: 0;
+    padding: 16px;
+    border: 1px solid #d9dadc;
+    background: #fff; }
+    .container .qr_code_pc img {
+      width: 102px; }
+    .container .qr_code_pc p {
+      font-size: 14px;
+      line-height: 20px; }
+  .container .back_top_outer {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    color: #717375;
+    text-align: center;
+    background: red; }
+    .container .back_top_outer .back_top_inner {
+      position: relative;
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background: yellow; }
+      .container .back_top_outer .back_top_inner #back-top {
+        position: absolute;
+        right: -105px;
+        top: 0; }
+        .container .back_top_outer .back_top_inner #back-top a {
+          width: 48px;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          color: #bbb;
+          transition: 1s;
+          -webkit-transition: 1s;
+          -moz-transition: 1s; }
+        .container .back_top_outer .back_top_inner #back-top a:hover {
+          color: #fff; }
+          .container .back_top_outer .back_top_inner #back-top a:hover span {
+            background-color: #777; }
+        .container .back_top_outer .back_top_inner #back-top span {
+          width: 48px;
+          height: 48px;
+          display: block;
+          margin-bottom: 7px;
+          background: #ddd url(../img/up-arrow.png) no-repeat center center;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+          -webkit-transition: 1s;
+          -moz-transition: 1s;
+          transition: 1s; } }

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/iconfont.css">
-    <link rel="stylesheet" href="/css/monokai.css" />
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/monokai.css" />
+    <script src="js/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -44,9 +44,20 @@
         <p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.
         </p> 
       </div>
-      <div class="weixin">
-        <img src="http://7xklz5.com1.z0.glb.clouddn.com/about.3.jpg" alt="">
-        <p>微信扫一 扫<br>关注我的公众号</p>
+      <div class="pc_qrcode_outer" style="display: none;">
+          <div class="pc_qrcode_pc_inner">
+              <div class="qr_code_pc">
+                <img src="img/qrcode.jpg" alt="">
+                <p>微信扫一扫<br>关注我的公众号</p>
+              </div>
+          </div>
+      </div>
+      <div class="back_top_outer">
+          <div class="back_top_inner">
+              <div id="back-top">
+                  <a href="#top"><span></span></a>
+              </div>
+          </div>
       </div>
     </div>
     <footer>
@@ -57,23 +68,45 @@
         <i class="iconfont social weibo">&#xe603;</i>
       </p>
     </footer>
-    // <script type="text/javascript">
-    //下面的代码可以使用键盘文章翻页,兼容Vim和游戏快键键，你需要取消注释，把page.previous.url和page.next.url部分设置为相应的链接地址。
-    // $(function(){
-    //   $(document).keydown(function(e) {
-    //     var url = false;
-    //         if (e.which == 37 || e.which == 72|| e.which == 65) {
-    //         url = page.previous.url;
-    //         }
-    //         else if (e.which == 39 || e.which == 76|| e.which == 68) {
-    //         url = page.next.url;
-    //         }
-    //         if (url) {
-    //             window.location = url;
-    //         }
-    //   });
-    // })
-    // </script>
+     <script type="text/javascript">
+        //下面的代码可以使用键盘文章翻页,兼容Vim和游戏快键键，你需要取消注释，把page.previous.url和page.next.url部分设置为相应的链接地址。
+        $(function(){
+          $(document).keydown(function(e) {
+            var url = false;
+                if (e.which == 37 || e.which == 72|| e.which == 65) {
+                url = page.previous.url;
+                }
+                else if (e.which == 39 || e.which == 76|| e.which == 68) {
+                url = page.next.url;
+                }
+                if (url) {
+                    window.location = url;
+                }
+          });
+        })
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("#back-top").hide()
+
+            $(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 100){
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+                $('#back-top a').click(function(){
+                    $('body, html').animate({
+                        scrollTop: 0
+                    }, 800);
+
+                    return false;
+                });
+            });
+        });
+    </script>
 
   </body>
 </html>

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>my book</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/iconfont.css">
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -41,9 +41,20 @@
           </ul>
         </div>
       </div>
-      <div class="weixin">
-        <img src="http://7xklz5.com1.z0.glb.clouddn.com/about.3.jpg" alt="">
-        <p>微信扫一扫<br>关注我的公众号</p>
+      <div class="pc_qrcode_outer" style="display: none;">
+          <div class="pc_qrcode_pc_inner">
+              <div class="qr_code_pc">
+                <img src="img/qrcode.jpg" alt="">
+                <p>微信扫一扫<br>关注我的公众号</p>
+              </div>
+          </div>
+      </div>
+      <div class="back_top_outer">
+          <div class="back_top_inner">
+              <div id="back-top">
+                  <a href="#top"><span></span></a>
+              </div>
+          </div>
       </div>
     </div>
     <footer>
@@ -55,5 +66,27 @@
       </p>
     </footer>
     <script src="js/book.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("#back-top").hide()
+
+            $(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 100){
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+                $('#back-top a').click(function(){
+                    $('body, html').animate({
+                        scrollTop: 0
+                    }, 800);
+
+                    return false;
+                });
+            });
+        });
+    </script>
   </body>
 </html>

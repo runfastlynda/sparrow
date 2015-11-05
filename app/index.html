@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/iconfont.css">
-    <link rel="stylesheet" href="/css/monokai.css" />
+    <link rel="stylesheet" href="css/monokai.css" />
+    <script src="js/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -20,7 +21,7 @@
             <a href="book.html">书单</a>
             /
             <a href="about.html">关于</a>
-        </nav>          
+        </nav>
       </header>
       <div class="content">
         <h3 class="year">2015</h3>
@@ -53,10 +54,96 @@
             <a href="/content.html">Welcome to Jekyll!</a>
           </li>
         </ul>
+        <h3 class="year">2013</h3>
+        <ul class="article-list">
+          <li>
+            <small>2013-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2013-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2013-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+        </ul>
+        <h3 class="year">2012</h3>
+        <ul class="article-list">
+          <li>
+            <small>2012-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2012-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2012-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+        </ul>
+        <h3 class="year">2011</h3>
+        <ul class="article-list">
+          <li>
+            <small>2011-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2011-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2011-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+        </ul>
+        <h3 class="year">2010</h3>
+        <ul class="article-list">
+          <li>
+            <small>2010-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2010-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2010-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+        </ul>
+        <h3 class="year">2009</h3>
+        <ul class="article-list">
+          <li>
+            <small>2009-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2009-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+          <li>
+            <small>2009-09-22</small>
+            <a href="/content.html">Welcome to Jekyll!</a>
+          </li>
+        </ul>
       </div>
-      <div class="weixin">
-        <img src="http://7xklz5.com1.z0.glb.clouddn.com/about.3.jpg" alt="">
-        <p>微信扫一扫<br>关注我的公众号</p>
+      <div class="pc_qrcode_outer" style="display: none;">
+          <div class="pc_qrcode_pc_inner">
+              <div class="qr_code_pc">
+                <img src="img/qrcode.jpg" alt="">
+                <p>微信扫一扫<br>关注我的公众号</p>
+              </div>
+          </div>
+      </div>
+      <div class="back_top_outer">
+          <div class="back_top_inner">
+              <div id="back-top">
+                  <a href="#top"><span></span></a>
+              </div>
+          </div>
       </div>
     </div>
     <footer>
@@ -67,5 +154,27 @@
           <i class="iconfont social weibo">&#xe603;</i>
       </p>
     </footer>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("#back-top").hide()
+
+            $(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 100){
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+                $('#back-top a').click(function(){
+                    $('body, html').animate({
+                        scrollTop: 0
+                    }, 800);
+
+                    return false;
+                });
+            });
+        });
+    </script>
   </body>
 </html>
