@@ -55,6 +55,13 @@ npm init</code></pre>
               </div>
           </div>
       </div>
+      <div class="back_top_outer">
+          <div class="back_top_inner">
+              <div id="back-top">
+                  <a href="#top"><span></span></a>
+              </div>
+          </div>
+      </div>
     </div>
     <footer>
       <p>Copyright © 2015 runfastlynda.</p>
@@ -64,5 +71,27 @@ npm init</code></pre>
           <i class="iconfont social weibo">&#xe603;</i>
         </p>
     </footer>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("#back-top").hide()
+
+            $(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 100){
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+                $('#back-top a').click(function(){
+                    $('body, html').animate({
+                        scrollTop: 0
+                    }, 800);
+
+                    return false;
+                });
+            });
+        });
+    </script>
   </body>
 </html>

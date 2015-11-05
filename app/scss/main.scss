@@ -446,6 +446,65 @@ footer {
                 line-height: 20px;
             }
         }
+        .back_top_outer {
+            display: block!important;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 200px;
+            color: #717375;
+            text-align: center;
+            background: red;
+
+            .back_top_inner {
+                position: relative;
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                background: yellow;
+
+                #back-top {
+                    position: absolute;
+                    right: -105px;
+                    top: 0;
+
+                    a {
+                        width: 48px;
+                        display: block;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #bbb;
+
+                        transition: 1s;
+                        -webkit-transition: 1s;
+                        -moz-transition: 1s;
+                    }
+
+                    a:hover {
+                        color: #fff;
+
+                        span {
+                            background-color: #777;
+                        }
+                    }
+
+                    span {
+                        width: 48px;
+                        height: 48px;
+                        display: block;
+                        margin-bottom: 7px;
+                        background: #ddd url(../img/up-arrow.png) no-repeat center center;
+
+                        -webkit-border-radius: 15px;
+                        -moz-border-radius: 15px;
+                        border-radius: 15px;
+
+                        -webkit-transition: 1s;
+                        -moz-transition: 1s;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
     }
-  
 }

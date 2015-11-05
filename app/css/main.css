@@ -308,4 +308,48 @@ footer {
       width: 102px; }
     .container .qr_code_pc p {
       font-size: 14px;
-      line-height: 20px; } }
+      line-height: 20px; }
+  .container .back_top_outer {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    color: #717375;
+    text-align: center;
+    background: red; }
+    .container .back_top_outer .back_top_inner {
+      position: relative;
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background: yellow; }
+      .container .back_top_outer .back_top_inner #back-top {
+        position: absolute;
+        right: -105px;
+        top: 0; }
+        .container .back_top_outer .back_top_inner #back-top a {
+          width: 48px;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          color: #bbb;
+          transition: 1s;
+          -webkit-transition: 1s;
+          -moz-transition: 1s; }
+        .container .back_top_outer .back_top_inner #back-top a:hover {
+          color: #fff; }
+          .container .back_top_outer .back_top_inner #back-top a:hover span {
+            background-color: #777; }
+        .container .back_top_outer .back_top_inner #back-top span {
+          width: 48px;
+          height: 48px;
+          display: block;
+          margin-bottom: 7px;
+          background: #ddd url(../img/up-arrow.png) no-repeat center center;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+          -webkit-transition: 1s;
+          -moz-transition: 1s;
+          transition: 1s; } }
