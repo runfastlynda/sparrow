@@ -1,0 +1,186 @@
+.lineno{
+	border-right: 1px solid #ccc;
+	display: inline-block;
+	padding: 0px 10px;
+	margin: 0 10px 0 -10px;
+}
+.highlight code span {
+	color: #999 !important;
+}
+.highlight code span {
+	font-style: normal !important;
+	font-weight: normal !important;
+}
+.highlight code .c {
+	color: #999 !important;
+	font-style: italic !important;
+}
+.highlight code .cm {
+	color: #999 !important;
+	font-style: italic !important;
+}
+.highlight code .cp {
+	color: #999 !important;
+	font-style: italic !important;
+}
+.highlight code .c1 {
+	color: #999 !important;
+	font-style: italic !important;
+}
+.highlight code .cs {
+	color: #999 !important;
+	font-weight: bold !important;
+	font-style: italic !important;
+}
+.highlight code .err {
+	color: #dc322f !important;
+	background: none !important;
+}
+.highlight code .k {
+	color: #cb4b16 !important;
+}
+.highlight code .o {
+	color: #222 !important;
+	font-weight: bold !important;
+}
+.highlight code .p {
+	color: #222 !important;
+}
+.highlight code .ow {
+	color: #2aa198 !important;
+	font-weight: bold !important;
+}
+.highlight code .gd {
+	color: #222 !important;
+	background-color: #f6cbcb !important;
+	display: inline-block
+}
+.highlight code .gd .x {
+	color: #222 !important;
+	background-color: #f2b7b6 !important;
+	display: inline-block
+}
+.highlight code .ge {
+	color: #222 !important;
+	font-style: italic !important;
+}
+.highlight code .gh {
+	color: #999 !important;
+}
+.highlight code .gi {
+	color: #222 !important;
+	background-color: #e6eacc !important;
+	display: inline-block
+}
+.highlight code .gi .x {
+	color: #222 !important;
+	background-color: #ced699 !important;
+	display: inline-block
+}
+.highlight code .gs {
+	color: #222 !important;
+	font-weight: bold !important;
+}
+.highlight code .gu {
+	color: #6c71c4 !important;
+}
+.highlight code .kc {
+	color: #859900 !important;
+	font-weight: bold !important;
+}
+.highlight code .kd {
+	color: #268bd2 !important;
+}
+.highlight code .kp {
+	color: #cb4b16 !important;
+	font-weight: bold !important;
+}
+.highlight code .kr {
+	color: #d33682 !important;
+	font-weight: bold !important;
+}
+.highlight code .kt {
+	color: #2aa198 !important;
+}
+.highlight code .n {
+	color: #268bd2 !important;
+}
+.highlight code .na {
+	color: #268bd2 !important;
+}
+.highlight code .nb {
+	color: #859900 !important;
+}
+.highlight code .nc {
+	color: #d33682 !important;
+}
+.highlight code .no {
+	color: #b58900 !important;
+}
+.highlight code .nl {
+	color: #859900 !important;
+}
+.highlight code .ne {
+	color: #268bd2 !important;
+	font-weight: bold !important;
+}
+.highlight code .nf {
+	color: #268bd2 !important;
+	font-weight: bold !important;
+}
+.highlight code .nn {
+	color: #b58900 !important;
+}
+.highlight code .nt {
+	color: #268bd2 !important;
+	font-weight: bold !important;
+}
+.highlight code .nx {
+	color: #b58900 !important;
+}
+.highlight code .vg {
+	color: #268bd2 !important;
+}
+.highlight code .vi {
+	color: #268bd2 !important;
+}
+.highlight code .nv {
+	color: #268bd2 !important;
+}
+.highlight code .mf {
+	color: #2aa198 !important;
+}
+.highlight code .m {
+	color: #2aa198 !important;
+}
+.highlight code .mh {
+	color: #2aa198 !important;
+}
+.highlight code .mi {
+	color: #2aa198 !important;
+}
+.highlight code .s {
+	color: #2aa198 !important;
+}
+.highlight code .sd {
+	color: #2aa198 !important;
+}
+.highlight code .s2 {
+	color: #2aa198 !important;
+}
+.highlight code .se {
+	color: #dc322f !important;
+}
+.highlight code .si {
+	color: #268bd2 !important;
+}
+.highlight code .sr {
+	color: #2aa198 !important;
+}
+.highlight code .s1 {
+	color: #2aa198 !important;
+}
+.highlight code div .gd {
+	display: inline-block;
+	width: 100%;
+}

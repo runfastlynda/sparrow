@@ -5,10 +5,21 @@
     <div class="container">
     {% include header.html %}
     {{ content }}
-    <div class="weixin">
-      <img src="http://7xklz5.com1.z0.glb.clouddn.com/about.3.jpg" alt="">
-      <p>微信扫一扫<br>关注我的公众号</p>
-    </div>
+    <div class="pc_qrcode_outer" style="display: none;">
+              <div class="pc_qrcode_pc_inner">
+                  <div class="qr_code_pc">
+                    <img src="/img/qrcode.jpg" alt="">
+                    <p>微信扫一扫<br>关注我的公众号</p>
+                  </div>
+              </div>
+          </div>
+          <div class="back_top_outer">
+              <div class="back_top_inner">
+                  <div id="back-top">
+                      <a href="#top"><span></span></a>
+                  </div>
+              </div>
+          </div>
     </div>
     {% include footer.html %}
   </body>

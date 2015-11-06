@@ -305,15 +305,13 @@ a:hover {
         background: transparent;
         border: 0;
      }
-
     pre {
+        border: 1px solid rgba(0, 0, 0, 0.07);
         padding: 16px;
         overflow: auto;
         font-size: 85%;
         line-height: 1.45;
         background-color: #f7f7f7;
-        border: none;
-        border-radius: 3px;
         word-wrap: normal;
     }
 
