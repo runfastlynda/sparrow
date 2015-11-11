@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* font seting*/
 @font-face {
   font-family: 'iconfont';
@@ -17,7 +18,7 @@
 /*common css*/
 body {
   background-color: #fafafa;
-  font-family: Georgia,'Helvetica Neue', 'Hiragino Sans GB', Helvetica, Arial, Sans-serif; }
+  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif; }
 
 a {
   text-decoration: none;
@@ -77,7 +78,9 @@ a:hover {
           text-decoration: underline; }
 
 .markdown {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  word-break: break-all;
   line-height: 2em;
   color: rgba(0, 0, 0, 0.8);
   word-wrap: break-word;
@@ -301,7 +304,7 @@ footer {
     right: -150px;
     top: 0;
     padding: 16px;
-    border: 1px solid #d9dadc;
+    border: 1px solid rgba(0, 0, 0, 0.07);
     background: #fff; }
     .container .qr_code_pc img {
       width: 102px; }
